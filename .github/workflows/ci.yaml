@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         
       - name: Start Redis Services
-        run: docker compose -f t/docker-compose.yml up -d
+        run: docker compose -f t/docker-compose.test.yml up -d
 
       - name: Setup Perl
         uses: shogo82148/actions-setup-perl@v1
