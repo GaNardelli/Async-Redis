@@ -16,7 +16,7 @@ jobs:
         run: docker-compose up -d
 
       - name: Setup Perl
-        uses: shogo8001/setup-perl@v1
+        uses: shogo8001/actions-setup-perl@v1
         with:
           perl-version: '5.42'
       
