@@ -28,6 +28,13 @@ jobs:
       - name: Release tests
         env:
           RELEASE_TESTING: 1
-          REDIS_HOST: redis
-          REDIS_AUTH: redis-auth
-        run: prove -Ilib -lv t/
+          REDIS_HOST: localhost
+          REDIS_PORT: 6379
+
+          REDIS_AUTH_HOST: 127.0.0.1
+          REDIS_AUTH_PORT: 6381
+          REDIS_AUTH_PASS: testpassword
+          
+          REDIS_CLUSTER_NODES: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+        
+        run: prove -Ilib -r t
