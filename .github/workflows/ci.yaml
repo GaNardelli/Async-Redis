@@ -23,7 +23,6 @@ jobs:
 #          - 'latest'
     container:
       image: perldocker/perl-tester:${{ matrix.perl-version }}     # https://hub.docker.com/r/perldocker/perl-tester
-      options: --network future-io-redis-test
     name: Perl ${{ matrix.perl-version }}
     steps:
       - uses: actions/checkout@v4
