@@ -22,7 +22,7 @@ jobs:
       
       - name: Prepare for release tests
         run: |
-            cpanm --installdep .
+            cpanm --installdep --notest .
             cpanm --notest Test::CheckManifest Test::Pod::Coverage Pod::Coverage Test::Pod
             
       - name: Release tests
@@ -30,7 +30,4 @@ jobs:
           RELEASE_TESTING: 1
           REDIS_HOST: redis
           REDIS_AUTH: redis-auth
-        run: |
-            perl Makefile.PL
-            make
-            make test
+        run: prove -r t
