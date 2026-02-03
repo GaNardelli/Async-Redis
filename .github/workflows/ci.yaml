@@ -30,9 +30,6 @@ jobs:
           RELEASE_TESTING: 1
           REDIS_HOST: localhost
           REDIS_PORT: 6379
-
-          REDIS_AUTH_HOST: localhost:6381
-          REDIS_AUTH_PASS: testpassword
           
           REDIS_CLUSTER_NODES: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
         
