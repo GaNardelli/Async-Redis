@@ -30,4 +30,4 @@ jobs:
           RELEASE_TESTING: 1
           REDIS_HOST: redis
           REDIS_AUTH: redis-auth
-        run: prove -r t
+        run: prove -Ilib -lv t/
